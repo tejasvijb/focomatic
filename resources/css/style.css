@@ -7,7 +7,7 @@ html {
 
 .main-content {
   position: relative;
-  top: 5.3125rem; /* To offset for fixed header. */
+  top: 5.3125rem; /*To offset for fixed header.*/
 }
 
 .center {
@@ -34,13 +34,26 @@ html {
   }
 }
 
+.banner{
+  background-image: url("../images/banner-landingpage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* position: relative; */
+  /* top: 10.625rem; */
+}
+
 /* Header */
 
 header {
   position: fixed;
   width: 100%;
+  height: 85px;
+  font-size: 1.5rem;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  color: #4a4a4a;
+  font-family: 'Roboto',monospace;
+  z-index: 5;
 }
 
 header .content {
@@ -124,6 +137,9 @@ header .mobile {
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
+  position: relative;
+  top: 10.625rem;
+  left: 100px;
 }
 
 #sign-up-cta .content {
@@ -214,19 +230,22 @@ header .mobile {
   justify-content: space-between;
   padding: 4rem 5%;
   background-color: #f3f3f3;
+
 }
 
 .feature {
   flex: 1;
   padding: 2rem;
+  padding-bottom: 0;
   margin: 0px 1.25rem;
   background-color: white;
+  height: 39.6875rem;
 }
 
 .feature .image-container {
-  width: 90%;
+  /* width: 90%; */
   height: 65%;
-  margin: 0 auto;
+  
 }
 
 .feature h2 {
@@ -241,6 +260,17 @@ header .mobile {
   line-height: 1.2;
   font-weight: 300;
   color: #4a4a4a;
+}
+
+.feature .content{
+  margin-top: 40px;
+  height: 187px;
+}
+
+.image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 890px) {
@@ -294,6 +324,7 @@ header .mobile {
 }
 
 #filters-section .images-container {
+  display: flex;
   max-width: 100%;
   padding: 0 1%;
 }
@@ -334,11 +365,11 @@ header .mobile {
   background-color: #f3f3f3;
 }
 
-#quotes-section content {
-  padding: 5rem 0;
+#quotes-section .content {
+  padding: 5rem 0 ;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
@@ -347,7 +378,7 @@ header .mobile {
   color: #4a4a4a;
 }
 
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
 }
 
@@ -371,6 +402,7 @@ header .mobile {
 /* Footer */
 
 footer {
+  /* height: 3.75rem; */
   background-color: #9b9b9b;
   padding: 1.5rem 2rem;
 }
@@ -385,7 +417,7 @@ footer .copyright {
   flex-grow: 1;
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (max-width: 600px) {
   footer .content {
     font-size: .625rem;
   }
