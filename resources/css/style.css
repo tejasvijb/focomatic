@@ -432,12 +432,14 @@ header .mobile {
   height: 1.875rem;
 }
 
-@media only screen and (max-width: 760px) {
-  #quotes-section content {
+@media only screen and (max-width: 890px) {
+  #quotes-section .content {
+    display: flex;
+    align-items: center;
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
@@ -447,6 +449,18 @@ header .mobile {
     padding-top: 1rem;
     margin: auto;
   }
+}
+
+@media screen and (max-width:720px) {
+  #quotes-section .content {
+    flex-direction: column;
+
+  }
+
+  #quotes-section .quote {
+    margin-bottom: 1.5rem;
+  }
+
 }
 
 /* Footer */
