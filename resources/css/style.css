@@ -30,7 +30,9 @@ html {
 
 @media only screen and (max-width: 760px) {
   .main-content {
+    position: relative;
     top: 2.5625rem;
+
   }
 }
 
@@ -38,8 +40,6 @@ html {
   background-image: url("../images/banner-landingpage.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  /* position: relative; */
-  /* top: 10.625rem; */
 }
 
 /* Header */
@@ -90,9 +90,34 @@ header .mobile {
   display: none;
 }
 
-@media only screen and (max-width: 760px) {
+.desktop ul li:nth-child(4){
+  display: none;
+}
+
+@media only screen and (min-width:600px) and (max-width: 890px){
+  
+  .desktop ul li:nth-child(4){
+    display: inline-block;
+  }
+  header .desktop .button{
+    padding: .1875rem .5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+  }
+
+}
+@media only screen and (max-width:760px){
+  nav li {
+    padding-left: 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
   header .desktop {
     display: none;
+  }
+  header{
+    height: 3rem;
   }
 
   header .mobile {
@@ -120,6 +145,12 @@ header .mobile {
     background-color: #9dc20b;
     line-height: 1.6;
     color: white;
+  }
+  .mobile ul li a img {
+    height: 100%;
+  }
+  .mobile ul li a {
+    height: 100%;
   }
 }
 
@@ -210,6 +241,9 @@ header .mobile {
 }
 
 @media only screen and (max-width: 450px) {
+  #sign-up-cta {
+    padding: 0;
+  }
   #sign-up-section {
     height: 20rem;
   }
@@ -239,7 +273,7 @@ header .mobile {
   padding-bottom: 0;
   margin: 0px 1.25rem;
   background-color: white;
-  height: 39.6875rem;
+  /* height: 39.6875rem; */
 }
 
 .feature .image-container {
@@ -288,13 +322,29 @@ header .mobile {
 
 @media only screen and (max-width: 760px) {
   #features-section {
-    flex-flow: column;
     padding: 0;
   }
 
   .feature {
     margin: 0;
     padding: 1.25rem 1rem 0 1rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #features-section {
+    flex-flow: column;
+    padding: 0;
+  }
+
+  .feature {
+    margin: 0;
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  .feature .content {
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -418,6 +468,9 @@ footer .copyright {
 }
 
 @media only screen and (max-width: 600px) {
+  /* .main-content{
+    width: 90%;
+  } */
   footer .content {
     font-size: .625rem;
   }
